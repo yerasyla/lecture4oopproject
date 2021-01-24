@@ -4,10 +4,6 @@ import com.company.interfaces.IAthlete;
 
 public class Main {
 
-
-
-
-
     public static void main(String[] args) {
         // Example 1
         /* Uncomment this if you need the first example
