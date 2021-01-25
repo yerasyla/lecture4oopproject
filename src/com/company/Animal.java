@@ -1,6 +1,7 @@
 package com.company;
 
-public abstract class Animal {
+public abstract class Animal implements IAnimal {
+
     private String name;
 
     public Animal(String name) {
@@ -14,13 +15,4 @@ public abstract class Animal {
     public void setName(String name) {
         this.name = name;
     }
-
-    public abstract void makeSound();
-
-    @Override
-    public String toString() {
-        return "Animal: name = " + name;
-    }
 }
-
-

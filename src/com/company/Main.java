@@ -1,34 +1,35 @@
 package com.company;
 
-import com.company.interfaces.IAthlete;
+import com.company.interfaces.IVehicle;
+
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Example 1
-        /* Uncomment this if you need the first example
-        ArrayList<Animal> animals = new ArrayList<>();
+        ArrayList<IVehicle> cars = new ArrayList<>();
 
-        animals.add(new Cat("Thomas"));
-        animals.add(new Dog("Rex"));
-        animals.add(new Fox("Firefox"));
-        // It is not possible to instantiate an
-        // object using class Animal
-        // animals.add(new Animal("Unknown animal"));
+        cars.add(new UsualCar(50));
+        cars.add(new TeslaModelS(700));
 
-        for (Animal a : animals) {
-            System.out.print(a.getName() + " says ");
-            a.makeSound();
+        for (IVehicle car : cars) {
+            car.move();
         }
-        */
 
-        //Example 2
+        System.out.println("--------------------");
+        for (IVehicle car : cars) {
+            car.stop();
+        }
 
-        IAthlete athlete = new JumpingSwimmer("James");
+    }
 
-        athlete.compete();
-        athlete.sayHooray();
 
+    public static void forceAnimalSay(ArrayList<Animal> animals) {
+        for (Animal animal : animals) {
+            System.out.print(animal.getName());
+            System.out.print(" says ");
+            animal.makeSound();
+        }
     }
 
 }
