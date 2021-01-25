@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.interfaces.IAnimal;
+
 public abstract class Animal implements IAnimal {
 
     private String name;
